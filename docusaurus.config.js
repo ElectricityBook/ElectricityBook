@@ -13,7 +13,7 @@ module.exports = {
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css',
       type: 'text/css',
-      integrity: 'sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq',
+      integrity: 'sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X',
       crossorigin: 'anonymous',
     },
   ],
@@ -28,41 +28,77 @@ module.exports = {
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Books',
           position: 'left',
+          items: [
+            {
+              to: 'docs/Electromagnetism/introduction',
+              label: '전기자기학',
+            },
+            {
+              label: '전기회로',
+              to: 'docs/ElectricCircuits/introduction',
+            },
+            {
+              label: '제어공학',
+              to: 'docs/ControlEngineering/introduction',
+            },
+            {
+              label: '전기기기',
+              to: 'docs/ElectricMachinery/introduction',
+            },
+            {
+              label: '전력공학',
+              to: 'docs/ElectricPowerSystem/introduction',
+            },
+            {
+              label: '전기응용 및 공사재료',
+              to: 'docs/ElectricApplication/introduction',
+            },
+            {
+              label: '전기설비기술기준',
+              to: 'docs/KEC/introduction',
+            },
+            // ... more items
+          ],
+          
         },
+        {to: 'blog', label: 'Blog', position: 'left'},
       ],
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Books',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: '전기자기학',
+              to: 'docs/Electromagnetism/introduction',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: '전기회로',
+              to: 'docs/ElectricCircuits/introduction',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: '제어공학',
+              to: 'docs/ControlEngineering/introduction',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: '전기기기',
+              to: 'docs/ElectricMachinery/introduction',
+            },
+            {
+              label: '전력공학',
+              to: 'docs/ElectricPowerSystem/introduction',
+            },
+            {
+              label: '전기응용 및 공사재료',
+              to: 'docs/ElectricApplication/introduction',
+            },
+            {
+              label: '전기설비기술기준',
+              to: 'docs/KEC/introduction',
             },
           ],
         },
@@ -75,12 +111,12 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/ElectricityBook/ElectricityBook',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ElectricityBook. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -93,7 +129,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/ElectricityBook/ElectricityBook/edit/master/',
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
@@ -101,7 +137,7 @@ module.exports = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/ElectricityBook/ElectricityBook/edit/master/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
