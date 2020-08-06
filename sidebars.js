@@ -5,6 +5,7 @@ module.exports = {
     ],
     '진공 중의 정전계':[
       'Electromagnetism/Electrostatics/StaticElectricity',
+      'Electromagnetism/Electrostatics/ElectricCharge',
       'Electromagnetism/Electrostatics/ElectricFieldLine',
       'Electromagnetism/Electrostatics/Voltage',
     ],
@@ -13,23 +14,29 @@ module.exports = {
       'Electromagnetism/Conductors/Capacitance',
     ],
     '유전체':[
-      'Electromagnetism/DielectricMaterial/Permittivity',
+      'Electromagnetism/DielectricMaterial/Polarization',
+      'Electromagnetism/DielectricMaterial/BoundaryCondition',
     ],
     '전계의 특수 해법 및 전류':[
       'Electromagnetism/ElectricCurrents/ImageCharge',
+      'Electromagnetism/ElectricCurrents/ElectricCurrents',
     ],
     '자계':[
       'Electromagnetism/MagneticField/Magnet',
+      'Electromagnetism/MagneticField/MagneticForce',
     ],
     '자성체와 자기회로':[
       'Electromagnetism/MagneticMaterial/Magnetization',
+      'Electromagnetism/MagneticMaterial/MagneticCircuits',
     ],
     '전자유도 및 인덕턴스':[
       'Electromagnetism/ElectromagneticInduction/ElectromagneticInduction',
+      'Electromagnetism/ElectromagneticInduction/Inductance',
     ],
     '전자계':[
       'Electromagnetism/ElectromagneticField/DisplacementCurrent',
       'Electromagnetism/ElectromagneticField/MaxwellEquation',
+      'Electromagnetism/ElectromagneticField/ElectromagneticWave',
     ],
   },
   전기회로: {
