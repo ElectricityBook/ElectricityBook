@@ -8,48 +8,90 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: <>Easy to Use</>,
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: <>전기자기학</>,
+    imageUrl: 'img/Eletrimagnetism.png',
+    toUrl:'docs/Electromagnetism/introduction',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        전기와 자기에 대한 학문
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: <>전기회로</>,
+    imageUrl: 'img/ElectricCircuit.jpg',
+    toUrl:'docs/ElectricCircuits/introduction',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        전기회로의 기본적인 구성 요소 및 해석을 위한 이론
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: <>제어공학</>,
+    imageUrl: 'img/ControlEngineering.jpg',
+    toUrl:'docs/ControlEngineering/introduction',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        자동 제어에 관한 공학
+      </>
+    ),
+  },
+  {
+    title: <>전기기기</>,
+    imageUrl: 'img/ElectricMachinary.png',
+    toUrl:'docs/ElectricMachinery/introduction',
+    description: (
+      <>
+        발전기, 전동기, 변압기
+      </>
+    ),
+  },
+  {
+    title: <>전력공학</>,
+    imageUrl: 'img/ElectricPowerSystem.png',
+    toUrl:'docs/ElectricPowerSystem/introduction',
+    description: (
+      <>
+        송전, 발전, 배전 등
+      </>
+    ),
+  },
+  {
+    title: <>전기응용 및 공사재료</>,
+    imageUrl: 'img/ElectricApplication.png',
+    toUrl:'docs/ElectricApplication/introduction',
+    description: (
+      <>
+        전기응용 및 공사재료
+      </>
+    ),
+  },
+  {
+    title: <>전기설비기술기준</>,
+    imageUrl: 'img/KEC.png',
+    toUrl:'docs/KEC/introduction',
+    description: (
+      <>
+        전기설비기술기준
       </>
     ),
   },
 ];
 
-function Feature({imageUrl, title, description}) {
+function Feature({imageUrl, title, toUrl, description}) {
   const imgUrl = useBaseUrl(imageUrl);
+  const tUrl = useBaseUrl(toUrl);
   return (
     <div className={clsx('col col--4', styles.feature)}>
       {imgUrl && (
         <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+          <a href={tUrl}>
+            <img className={styles.featureImage} src={imgUrl} alt={title} />
+          </a>
         </div>
       )}
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3 className="text--center">{title}</h3>
     </div>
   );
 }
@@ -59,22 +101,12 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get Started
-            </Link>
-          </div>
         </div>
       </header>
       <main>

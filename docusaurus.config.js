@@ -6,7 +6,7 @@ module.exports = {
   url: 'https://ElectricityBook.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'ElectricityBook', // Usually your GitHub org/user name.
   projectName: 'ElectricityBook.github.io', // Usually your repo name.
   stylesheets: [
@@ -21,8 +21,8 @@ module.exports = {
     navbar: {
       title: '전기책',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: '전기책',
+        src: 'img/logo.png',
       },
       items: [
         {
