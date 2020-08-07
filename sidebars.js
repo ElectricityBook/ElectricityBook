@@ -77,12 +77,21 @@ module.exports = {
     ],
     '발·변전 일반':[
       'ElectricPowerSystem/ElectricalGeneration/Hydroelectricity',
+      'ElectricPowerSystem/ElectricalGeneration/ThermalPower',
+      'ElectricPowerSystem/ElectricalGeneration/NuclearPower',
+      'ElectricPowerSystem/ElectricalGeneration/ElectricalSubstation',
+      'ElectricPowerSystem/ElectricalGeneration/ProtectiveRelay',
     ],
     '송·배전선로의 전기적 특성':[
       'ElectricPowerSystem/TransmissionLineCharacteristic/TransmissionLineParameters',
+      'ElectricPowerSystem/TransmissionLineCharacteristic/Corona',
+      'ElectricPowerSystem/TransmissionLineCharacteristic/ShortTransmissionLine',
+      'ElectricPowerSystem/TransmissionLineCharacteristic/OverheadPowerLine',
     ],
     '송·배전방식과 그 설비 및 운용':[
       'ElectricPowerSystem/TransmissionLineOperation/Transmission',
+      'ElectricPowerSystem/TransmissionLineOperation/Grounding',
+      'ElectricPowerSystem/TransmissionLineOperation/Faults',
     ],
     '계통보호방식 및 설비':[
       'ElectricPowerSystem/SystemProtection/AbnormalVoltage',
